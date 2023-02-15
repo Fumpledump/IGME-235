@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #F25CA2;
     text-align: center;
-    display: flexbox;
     align-items: center;
     justify-content: center;
     width: 80%;
