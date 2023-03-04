@@ -1,0 +1,83 @@
+h1{
+    color: #901e1b;
+    font-weight: bold;
+}
+h2{
+    color: #0f10ad;
+    font-weight: bold;
+}
+p{
+    font-size: large;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #feffa7;
+  }
+
+#banner img {
+    max-width: 100%;
+    height: auto;
+  }
+
+header{
+    grid-area: header;
+}
+
+article {
+    grid-area: article;
+}
+
+aside p{
+    font-size: larger;
+    font-weight: bold;
+}
+
+aside #title {
+    grid-area: title;
+}
+
+aside .screenshot{
+    background-color: red;
+}
+
+aside .caption{
+    background-color: black;
+}
+
+aside{
+    grid-area: aside;
+    display: grid;
+    grid-template-areas:    "title  title"
+                            "screenshot caption"
+                            "screenshot caption"
+                            "screenshot caption";
+    
+}
+
+section.item{
+    grid-area: item;
+}
+
+section {
+    grid-area: section;
+    background-color: #fba4fd;
+    display: grid;
+    grid-template-areas:    "item    item  item"
+                            "item    item  item"
+                            "item    item  item";
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas: "header    header  header"
+                         "article   article aside"
+                         "article   article aside"
+                         "article   article aside"
+                         "section   section section";
+}
+
+#grid-container {
+    overflow: hidden;
+  }
+  
