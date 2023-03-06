@@ -29,7 +29,7 @@ article {
 }
 
 aside p{
-    font-size: larger;
+    font-size: x-large;
     font-weight: bold;
 }
 
@@ -38,11 +38,9 @@ aside #title {
 }
 
 aside .screenshot{
-    background-color: red;
 }
 
 aside .caption{
-    background-color: black;
 }
 
 aside{
