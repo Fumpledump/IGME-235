@@ -16,8 +16,9 @@ body {
   }
 
 #banner img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
   }
 
 header{
@@ -25,57 +26,130 @@ header{
 }
 
 article {
+    display: block;
     grid-area: article;
+    margin: 5%;
 }
 
-aside p{
-    font-size: x-large;
-    font-weight: bold;
+article img
+{
+    width: 50%;
+    height: 50%;
 }
 
-aside #title {
-    grid-area: title;
+article #summary p 
+{
+    width: 30%;
+    float: left;
 }
 
-aside .screenshot{
+article .caption p 
+{
+    width: 20%;
+    float:  right;
 }
 
-aside .caption{
-}
 
 aside{
     grid-area: aside;
-    display: grid;
-    grid-template-areas:    "title  title"
-                            "screenshot caption"
-                            "screenshot caption"
-                            "screenshot caption";
-    
 }
 
-section.item{
-    grid-area: item;
+aside img
+{
+    width: 80%;
+    height: 80%;
+}
+
+aside .screenshot img
+{
+    width: 35%;
+    height: 35%;
+}
+
+aside p{
+    font-size: large;
+    font-weight: bold;
+    float: left;
+    width: 35%;
+    margin:2%;
+}
+
+section header
+{
+    grid-area: header;
 }
 
 section {
     grid-area: section;
     background-color: #fba4fd;
+}
+
+section #items
+{
     display: grid;
-    grid-template-areas:    "item    item  item"
-                            "item    item  item"
-                            "item    item  item";
+    grid-template-areas: "section_image section_info    flower"
+                         "stone_axe      skateboard      milk"
+                         "fireball        honey_girl     eggplant";
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 20% 40% 40%;
+    margin: 5px;
+}
+
+section #items #section_image {
+    grid-area: section_image;
+}
+
+section #items #section_image img {
+    width: 100%;
+}
+
+section #items #section_info{
+    grid-area: section_info;
+    width: 80%;
+    font-size: larger;
+}
+
+section #items .item{
+    margin: auto;
+}
+
+section #items .item img{
+    width: 50%;
+}
+
+section #items #stone_axe{
+    grid-area: stone_axe;
+}
+
+section #items #fireball{
+    grid-area: fireball;
+}
+
+section .items #skateboard{
+    grid-area: skateboard;
+}
+
+section #items #honey_girl{
+    grid-area: honey_girl;
+}
+
+section #items #flower{
+    grid-area: flower;
+}
+
+section #items #milk{
+    grid-area: milk;
+}
+
+section #items #eggplant{
+    grid-area: eggplant;
 }
 
 #wrapper {
     display: grid;
     grid-template-areas: "header    header  header"
                          "article   article aside"
-                         "article   article aside"
-                         "article   article aside"
                          "section   section section";
+    grid-template-columns: 30% 30% 40%;
 }
-
-#grid-container {
-    overflow: hidden;
-  }
   
