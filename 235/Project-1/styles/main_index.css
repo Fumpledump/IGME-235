@@ -7,8 +7,16 @@ h1{
 h2{
     color: #5888c6;
     font-weight: bold;
-    font-family: Boogaloo;
+    font-family: Boogaloo, Arial, sans-serif;
 }
+section h2{
+    color: #ffffff;
+    font-weight: normal;
+    font-size: xx-large;
+    text-shadow: 2px 2px 4px #000;
+    -webkit-text-stroke: 0.5px #000;
+}
+
 p{
     font-size: large;
     font-family: 'Courier New', Courier, monospace;
@@ -17,6 +25,7 @@ p{
 body {
     margin: 0 auto;
     background-color: #ffe8c6;
+    max-width: 60%;
   }
 
 #banner img {
@@ -29,32 +38,7 @@ header{
     grid-area: header;
 }
 
-article {
-    display: block;
-    grid-area: article;
-    margin: 2%;
-}
 
-article img
-{
-    width: 45%;
-    height: 45%;
-    border-radius: 4px;
-    box-shadow: 0px 0px 10px #000000;
-    margin: 2px;
-}
-
-article #summary p 
-{
-    width: 30%;
-    float: left;
-}
-
-article .caption p 
-{
-    width: 20%;
-    float:  right;
-}
 
 
 aside{
@@ -102,17 +86,6 @@ section {
     box-shadow: 0px 0px 10px #000000;
 }
 
-section #items
-{
-    display: grid;
-    grid-template-areas: "section_image section_info    flower"
-                         "stone_axe      skateboard      milk"
-                         "fireball        honey_girl     eggplant";
-    grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 20% 40% 40%;
-    margin: 5px;
-}
-
 section #items #section_image {
     grid-area: section_image;
 }
@@ -128,13 +101,6 @@ section #items #section_info{
     grid-area: section_info;
     width: 100%;
     font-size: larger;
-}
-
-section #items #section_info h1{
-    color: #fefef3;
-    font-size: 100px;
-    text-shadow: 2px 2px 4px #000;
-    -webkit-text-stroke: 0.5px #000;
 }
 
 section #items .item{
@@ -173,30 +139,144 @@ section #items #eggplant{
     grid-area: eggplant;
 }
 
-#wrapper {
+#wrapper 
+{
     display: grid;
-    grid-template-areas: "header    header  header"
-                         "article   article aside"
-                         "section   section section";
-    grid-template-columns: 30% 30% 40%;
+    grid-template-areas: "header"
+                            "article"
+                            "aside"
+                            "section";
 }
-  
+
+section #items #section_info h1{
+    color: #fefef3;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #000;
+    -webkit-text-stroke: 0.5px #000;
+}
+
+section #items
+{
+    display: grid;
+    grid-template-areas: "section_image"
+                        "section_info"    
+                         "flower"
+                         "stone_axe"     
+                         "skateboard"      
+                         "milk"
+                         "fireball"      
+                         "honey_girl"   
+                         "eggplant";
+    margin: 5px;
+}
+
+article {
+    display: block;
+    grid-area: article;
+    margin: 2%;
+}
+
+article img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px #000000;
+    margin: 8px;
+}
+
+article #summary p 
+{
+    width: 100%;
+}
 
 nav {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    background-color: #2d2d2d;
+    background-color: #635643;
+    font-family: Boogaloo, sans-serif;
+    font-size: small;
     padding: 2px;
     z-index: 1;
-  }
+}
+
+@media screen and (min-width: 760px) {
+    #wrapper {
+        display: grid;
+        grid-template-areas: "header    header  header"
+                            "article   article aside"
+                            "section   section section";
+        grid-template-columns: 30% 30% 40%;
+    }
+
+    section #items #section_info h1{
+        color: #fefef3;
+        font-size: 100px;
+        text-shadow: 2px 2px 4px #000;
+        -webkit-text-stroke: 0.5px #000;
+    }
+
+    section #items
+    {
+        display: grid;
+        grid-template-areas: "section_image section_info    flower"
+                            "stone_axe      skateboard      milk"
+                            "fireball        honey_girl     eggplant";
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 30% 30% 30%;
+        margin: 5px;
+    }
+
+    article {
+        display: block;
+        grid-area: article;
+        margin: 2%;
+    }
+    
+    article img
+    {
+        width: 45%;
+        height: 45%;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px #000000;
+        margin: 8px;
+    }
+    
+    article #summary p 
+    {
+        width: 32%;
+        float: left;
+    }
+    
+    article .caption p 
+    {
+        width: 20%;
+        float:  right;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: #635643;
+        font-family: Boogaloo, sans-serif;
+        font-size: large;
+        padding: 10px;
+        z-index: 1;
+    }
+}
+
+
   
   .menu-toggle {
     display: none;
     cursor: pointer;
     color: #fff;
-    font-size: 20px;
+    font-size: large;
+    font-family: Boogaloo, sans-serif;
     float: right;
     margin-top: 5px;
   }
