@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>Hello-4</title>
+   <script>
+     "use strict";
+     // 1) Common JS Objects
+     let colors = ["red", "green", "blue"]; // Array literal
+     let person = {name:"Fred", age:20};   // Object literal
+     let month = new Date().getMonth(); 
+     let age = Math.round(20.999);
+     let age2 = Math.floor(20.999);
+
+     // 2) New code
+     // Append another color to the end of the colors array
+     colors.push("pink");
+     
+     // Print out the last element in the colors array
+     console.log(colors[colors.length-1]);
+     
+     // Loop through the colors array and print out each value to the console
+     for(let i = 0; i < colors.length; i++) {
+         console.log(colors[i]);
+     }
+     
+     // Add a new property named school to the person object and give it a value of "RIT"
+     person.school = "RIT";
+     
+     // Print out the value of the school property in the person object
+     console.log(person.school);
+     
+     // Print out the number of seconds that have passed since 1970
+     console.log(Date.now() / 1000); // Gotta divide it for seconds
+     
+     // Print out the value of pi
+     console.log(Math.PI);
+     
+     // Print out the absolute value of -999
+     console.log(Math.abs(-999));
+     
+     // Print out an "all caps" version of the string "Hello"
+     console.log("Hello".toUpperCase());
+   </script>
+</head>
+<body>
+</body>
+</html>
