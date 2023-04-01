@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Phrases</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Salvador Dali Quotes</h1>
+        <h2>By John Haley<h2>
+    </header>
+    <main>
+        <div id="phrase-container">
+            <div id="phrase"></div>
+            <button onclick="displayQuote()">New Quote</button>
+        </div>
+    </main>
+    <script>
+
+    const phrases = 
+    [
+        "Have no fear of perfection - you'll never reach it.",
+        "I don't do drugs. I am drugs.",
+        "Drawing is the honesty of the art. There is no possibility of cheating. It is either good or bad.",
+        "Liking money like I like it, is nothing less than mysticism. Money is a glory.",
+        "Intelligence without ambition is a bird without wings.",
+        "Those who do not want to imitate anything, produce nothing.",
+        "There are some days when I think I'm going to die from an overdose of satisfaction.",
+        "Let my enemies devour each other.",
+        "I seated ugliness on my knee, and almost immediately grew tired of it.",
+        "Democratic societies are unfit for the publication of such thunderous revelations as I am in the habit of making.",
+        "We must always remember that the Chinese revolution was not a peasant's revolution, but one of the extreme Right.",
+        "I do not paint a portrait to look like the subject, rather does the person grow to look like his portrait.",
+        "Surrealism is destructive, but it destroys only what it considers to be shackles limiting our vision."
+    ];
+
+    function displayRandomPhrase() 
+    {
+        const phraseElement = document.getElementById("phrase");
+        const randomIndex = Math.floor(Math.random() * phrases.length);
+        const randomPhrase = phrases[randomIndex];
+
+        phraseElement.textContent = randomPhrase;
+    }
+
+    function displayQuote() 
+    {
+        displayRandomPhrase();
+    }
+
+    displayRandomPhrase();
+</script>
+</body>
+</html>

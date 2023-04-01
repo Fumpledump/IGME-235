@@ -1,0 +1,60 @@
+body 
+{
+    background-image: url('salvador-dali.jpg');
+    background-size: cover;
+    font-family: 'Alkatra', cursive;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+header 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: rgba(0,0,0,0.5);
+    flex-direction: column;
+}
+h1 
+{
+    font-size: 36px;
+    margin-bottom: 0px;
+}
+h2
+{
+    font-size: 26px;
+    margin-top: 0px;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+#phrase-container {
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+#phrase {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+button:active {
+    transform: translateY(2px);
+}
