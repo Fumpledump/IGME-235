@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Web Apps-3-HW</title>
+	<title>Web Apps-4-HW</title>
 	<style>
 		body{border:1px solid gray;}
 	</style>
@@ -39,21 +39,23 @@
             "Spite Houses Wikipedia Page" : "https://en.wikipedia.org/wiki/Spite_house",
         }
 
+    const createList = (listElement, array = ["puppydogs", "butterflies", "lollipops"]) => 
+    {
+        for (let i = 0; i < array.length; i++) 
+        {
+            let li = document.createElement("li");
+            li.innerText = array[i];
+            listElement.appendChild(li);
+        }
+    }
+
     // add colors to list
     let colorsList = document.getElementById("colorsList");
-    for (let i = 0; i < colors.length; i++) {
-        let li = document.createElement("li");
-        li.innerText = colors[i];
-        colorsList.appendChild(li);
-    }
+    createList(colorsList, colors);
 
     // add foods to list
     let foodsList = document.getElementById("foodsList");
-    for (let food of foods) {
-        let li = document.createElement("li");
-        li.innerText = food;
-        foodsList.appendChild(li);
-    }
+    createList(foodsList, foods);
 
     
     // add links to list
