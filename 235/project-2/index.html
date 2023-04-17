@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trivia Game</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+    <body>
+        <div class = "wrapper">
+            <div class = "game-container">
+                <div class = "game-header">
+                    <h1 class = "game-title">Trivia Game of Attrition</h1>
+                    <div class = "game-score">
+                        <span id = "total-score">Total Score: </span>
+                    </div>
+                </div>
+                <div class = "game-body">
+                    <h2 class = "trivia-question" id = "question"></h2>
+                    <ul class = "quiz-options">
+                    </ul>
+                    <div id = "result">
+                    </div>
+                </div>
+                <div class = "game-footer">
+                    <button type = "button" id = "check-answer">Check Answer</button>
+                    <button type = "button" id = "next-question">Next Question</button>
+                    <button type = "button" id = "try-again">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="scripts/main.js"></script>
+</html>

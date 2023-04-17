@@ -1,0 +1,111 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .game-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    width: 1200px;
+  }
+  
+  .game-header {
+    background-color: #910f88;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .game-title {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .game-score {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .game-body {
+    padding: 20px;
+  }
+  
+  .trivia-question {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 20px;
+  }
+  
+  .category {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #fa0ed7;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .selected{
+    background-color: #129e58!important;
+    color: #fff!important;
+    border-color: var(--grey-color)!important;
+    box-shadow: 0 4px 0 0 #bbbbbb!important;
+}
+  
+  .quiz-options li {
+    background-color: #0e55fa;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 25px;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-align: left;
+    transition: all 0.2s ease;
+  }
+  
+  .quiz-options li:hover {
+    background-color: #0f1891;
+  }
+  
+  #result {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  .game-footer {
+    background-color: #910f88;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+  }
+  
+  button {
+    background-color: #ff3fc2;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #c02690;
+  }
+  
+  button:active {
+    transform: translateY(2px);
+  }
