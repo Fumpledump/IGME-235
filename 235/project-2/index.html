@@ -4,32 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Trivia Game</title>
-	<link rel="stylesheet" type="text/css" href="styles/main.css">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
-    <body>
-        <div class = "wrapper">
-            <div class = "game-container">
-                <div class = "game-header">
-                    <h1 class = "game-title">Trivia Game of Attrition</h1>
-                    <div class = "game-score">
-                        <span id = "total-score">Total Score: </span>
-                    </div>
-                </div>
-                <div class = "game-body">
-                    <h2 class = "trivia-question" id = "question"></h2>
-                    <ul class = "quiz-options">
-                    </ul>
-                    <div id = "result">
-                    </div>
-                </div>
-                <div class = "game-footer">
-                    <button type = "button" id = "check-answer">Check Answer</button>
-                    <button type = "button" id = "next-question">Next Question</button>
-                    <button type = "button" id = "try-again">Try Again</button>
+<body>
+    <div class="wrapper">
+        <div id="start-screen">
+            <h1>Welcome to Trivia Game of Attrition!</h1>
+            <label for="difficulty-select">Select Difficulty:</label>
+            <select id="difficulty-select" name="difficulty">
+                <option value="any">Any</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <label for="category-select">Select Category:</label>
+            <select id="category-select" name="difficulty">
+                <option value="any">Any</option>
+                <option value="9">General Knowledge</option>
+                <option value="10">Books</option>
+                <option value="11">Film</option>
+                <option value="12">Music</option>
+                <option value="13">Musicals & Theatres</option>
+                <option value="14">Television</option>
+                <option value="15">Video Games</option>
+                <option value="16">Board Games</option>
+                <option value="17">Science & Nature</option>
+                <option value="18">Computers</option>
+                <option value="19">Mathematics</option>
+                <option value="20">Mythology</option>
+                <option value="21">Sports</option>
+                <option value="22">Geography</option>
+                <option value="23">History</option>
+                <option value="24">Politics</option>
+                <option value="25">Art</option>
+                <option value="26">Celebrities</option>
+                <option value="27">Animals</option>
+                <option value="28">Vehicles</option>
+                <option value="29">Comics</option>
+                <option value="30">Gadgets</option>
+                <option value="31">Japanese Anime & Manga</option>
+                <option value="32">Cartoon & Animations</option>
+            </select>
+            <label for="type-select">Select Type:</label>
+            <select id="type-select" name="difficulty">
+                <option value="any">Any</option>
+                <option value="multiple">Multiple Choice</option>
+                <option value="boolean">True / False</option>
+            </select>
+            <button type="button" id="start-button">Start</button>
+        </div>
+        <div class="game-container">
+            <div class="game-header">
+                <h1 class="game-title">Trivia Game of Attrition</h1>
+                <div class="game-score">
+                    <span id="total-score">Total Score: </span>
                 </div>
             </div>
+            <div class="game-body">
+                <h2 class="trivia-question" id="question"></h2>
+                <ul class="quiz-options">
+                </ul>
+                <div id="result">
+                </div>
+            </div>
+            <div id="loading-screen">
+                <h2>Loading...</h2>
+            </div>
+            <div class="game-footer">
+                <button type="button" id="check-answer">Check Answer</button>
+                <button type="button" id="next-question">Next Question</button>
+                <button type="button" id="restart">Restart</button>
+                <button type="button" id="try-again">Try Again</button>
+            </div>
         </div>
-    </body>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    </div>
+</body>
+<script type="text/javascript" src="scripts/main.js"></script>
 </html>

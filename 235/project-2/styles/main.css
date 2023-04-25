@@ -4,8 +4,101 @@
     align-items: center;
     height: 100vh;
   }
+
+  #start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  }
   
+  #start-screen h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #loading-screen h2
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+select {
+  font-family: 'Arial', sans-serif;
+  padding: 8px 38px 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 25px;
+
+}
+
+  select option {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  select:hover {
+    background-color: #e6e6e6;
+  }
+
+  select:focus {
+    outline: none;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Active state for select dropdown */
+  select:active {
+    transform: translateY(1px);
+  }
+
+  /* Disabled state for select dropdown */
+  select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  /* Style for the dropdown options when hovered */
+  select option:hover {
+    background-color: #d9d9d9;
+    color: #333;
+  }
+
+  /* Style for the selected option */
+  select option:checked {
+    background-color: #fff;
+    color: #333;
+  }
+
+  /* Style for the dropdown when it is open */
+  select:required:invalid:focus {
+    background-image: none;
+    outline: none;
+    box-shadow: 0px 0px 3px 3px rgba(255, 0, 0, 0.1);
+  }
+
+
+
   .game-container {
+    display: none;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
@@ -47,6 +140,7 @@
   .category {
     display: inline-block;
     padding: 5px 10px;
+    margin: 0% 2% 0% 0%;
     background-color: #fa0ed7;
     color: white;
     border-radius: 5px;
