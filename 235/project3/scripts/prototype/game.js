@@ -22,7 +22,8 @@ const worldTile = Object.freeze({
 	WALL: 		1,
 	GRASS: 		2,
 	WATER: 		3,
-	GROUND: 	4
+	GROUND: 	4,
+	ROCK: 		5
 });
 
 // the "grunt" sound that plays when the player attempts to move into a wall or water square
@@ -47,15 +48,15 @@ const player = Object.seal({
 
 // II. INIT code
 window.onload = ()=>{
-	currentGameWorld = gameworld["world" + currentLevelNumber];
+	currentGameWorld = gameworld["room" + currentLevelNumber];
 	let numCols = currentGameWorld[0].length;
 	let numRows = currentGameWorld.length;
 	createGridElements(numRows,numCols);
 	drawGrid(currentGameWorld);
 	loadLevel(currentLevelNumber);
 	drawGameObjects(currentGameObjects);
-	//effectAudio = document.querySelector("#effectAudio");
-	//effectAudio.volume = 0.2;
+	effectAudio = document.querySelector("#effectAudio");
+	effectAudio.volume = 0.2;
 	setupEvents();
 }
 
@@ -84,8 +85,8 @@ function loadLevel(levelNum = 1){
 	node.className = "gameObject";
 
 	// now initialize our player
-	player.x = 1;
-	player.y = 1;
+	player.x = 6;
+	player.y = 6;
 	player.element = node.cloneNode(true);
 	player.element.classList.add("player");
 	container.appendChild(player.element);
@@ -134,6 +135,10 @@ function drawGrid(array){
         		case worldTile.GROUND:
         		element.classList.add("ground");
         		break;
+
+				case worldTile.ROCK:
+				element.classList.add("rock");
+				break;
 			}
 		}
 	}
