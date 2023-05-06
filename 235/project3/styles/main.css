@@ -1,0 +1,295 @@
+/* General */
+
+body
+{
+	background-color: #15102e;
+}
+
+/* Menu */
+
+#Menu {
+	display: block;
+	background-color: #a100a1;
+	color: #fff;
+	padding: 20px;
+	text-align: left;
+  }
+  
+  #Menu h1 {
+	font-family: 'Press Start 2P', cursive;
+	font-size: 48px;
+	margin-top: 0;
+  }
+  
+  #Menu button {
+	background-color: #fff;
+	border: none;
+	border-radius: 4px;
+	color: #333;
+	cursor: pointer;
+	font-size: 18px;
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-family: 'Press Start 2P', cursive;
+  }
+  
+  #Menu button:hover {
+	background-color: #ddd;
+  }
+
+/* Level Editor */
+
+#Editor {
+	display: none;
+}
+
+#Editor h1{
+	font-family: 'Press Start 2P', cursive;
+	display: inline-block;
+	position:absolute;
+	font-size:1.3em;
+	color: #ffffff;
+	margin-left: 15%;
+}
+
+#tileChooser{
+	position: absolute;
+	top: 65px;
+	left:800px;
+	margin-left: 15%;
+}
+
+#editorOutputButton
+{
+	position: absolute;
+	top: 90px;
+	left:800px;
+	margin-left: 15%;
+}
+
+#leaveEditorButton
+{
+	position: absolute;
+	top: 120px;
+	left:800px;
+	margin-left: 15%;
+}
+
+#outputtedLevelData
+{
+	position: absolute;
+	top: 140px;
+	left:800px;
+	margin-left: 15%;
+	color: #ffffff;
+}
+
+#Editor span.cell{
+	height:32px;
+	width:32px;
+	border: 1px solid #000000; /* actual width & height is 32px because of border */
+	background-color: #ccc;
+	padding:0;
+	margin:0;
+	position:absolute;
+
+}
+
+/* Get rid of the cell border when it is selected */
+#Editor span.cellSelected{
+	height:32px;
+	width:32px;
+	border:0;
+	background-color: red;
+	padding:0;
+	margin:0;
+	position:absolute;
+}
+
+
+#levelEditorGrid{
+	top:5px;
+	left:5px;
+	padding:0;
+	display:inline-block;
+	position:absolute;
+	z-index: 0; /* underneath everything */
+}
+
+#Editor h1{
+	font-family: 'Press Start 2P', cursive;
+	display: inline-block;
+	position:absolute;
+	font-size:1.3em;
+	top: 0;
+	left:800px;
+}
+
+/* Map Explorer */
+
+#Explorer {
+	display: none;
+}
+
+#Explorer h1{
+	font-family: 'Press Start 2P', cursive;
+	display: inline-block;
+	position:absolute;
+	font-size:1.3em;
+	top: 0;
+	left:1000px;
+	line-height:1.5em;
+	color: #ffffff;
+}
+
+#explorerGrid{
+	top:5px;
+	left:5px;
+	padding:0;
+	display:inline-block;
+	position:absolute;
+	z-index: 0; /* underneath everything */
+}
+
+
+/* Background Tile Styles */
+span.floor{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+}
+
+span.wall{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -32px -32px;
+}
+
+span.grass{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -64px -64px;
+}
+
+span.water{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -96px -96px;
+}
+
+span.ground{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -128px -128px;
+}
+
+span.rock{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -160px -160px;
+}
+
+#Explorer span.cell{
+	height:32px;
+	width:32px;
+	border: 1px solid #000000; /* actual width & height is 32px because of border */
+	background-color: #ccc;
+	padding:0;
+	margin:0;
+	position:absolute;
+}
+
+#Explorer span.cellSelected{
+	height:32px;
+	width:32px;
+	border:0;
+	background-color: red;
+	padding:0;
+	margin:0;
+	position:absolute;
+}
+
+
+/* Game Object Styles */
+span.gameObject{
+	height:32px;
+	width:32px;
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	z-index: 100; /* layered between background tiles and player */
+	background-color:black;
+	background: url(../images/characters.png);
+}
+
+span.chest1{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	background-position: -96px 0;
+}
+
+span.key1{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	background-position: -64px -32px;
+}
+
+span.monster1{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	z-index: 500; /* layered between other game objects and player */
+	background-position: -32px 0px;
+}
+
+span.monster2{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	z-index: 500; /* layered between other game objects and player */
+	background-position: -64px 0px;
+}
+
+span.monster3{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	z-index: 500; /* layered between other game objects and player */
+	background-position: -0px -32px;
+}
+
+/* player style */
+span.player{ 
+	background: url(../images/characters.png);
+	z-index: 1000; /* On top of everything */
+	transition-property: all;
+	transition-duration: .25s;
+}
+
+span.ring1{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	background-position: -128px 0px;
+}
+
+span.treasure1{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	background-position: -448px -448px;
+}
+
+span.treasure2{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	background-position: -928px -448px;
+}

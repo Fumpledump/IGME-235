@@ -32,7 +32,6 @@ const gameworld = {
 	GROUND: 	4,
 	ROCK: 		5
 	*/
-
 	room1: [ 
 		[4,4,4,4,4,4,4,4,4,4,4,4],
 		[4,4,2,2,2,2,2,2,2,2,2,4],
@@ -52,7 +51,15 @@ const gameworld = {
 		[5,5,5,2,0,0,0,0,2,5,5,5],
 		[5,5,2,2,0,0,0,2,2,5,5,5],
 		[4,5,2,0,0,0,0,2,5,5,5,5]
-	]
+	],
+	// X Y
+	spawn1: [5,16],
+	// UP DOWN LEFT RIGHT
+	levelLoader1: [0,0,1,0],
+
+	room2: [[1,1,1,1,1,1],[1,0,0,0,0,1],[1,0,0,0,0,1],[1,0,0,0,0,1],[1,0,0,0,0,1],[1,1,1,1,1,1]],
+	spawn2: [5,16],
+	levelLoader2: [0,0,1,0]
 };
 
 
@@ -72,18 +79,6 @@ const cssClass = Object.freeze({
 const allGameObjects = {
 	// we aren't using .type yet
 	level1:[
-		{x:10, y:18, type:"monster", 	className: cssClass.MONSTER1},
-		{x:12, y:18, type:"monster",	className: cssClass.MONSTER1},
-		{x:25, y:15, type:"monster",	className: cssClass.MONSTER2},
-		{x:10, y:3,  type:"monster",	className: cssClass.MONSTER3},
-		{x:24, y:15, type:"chest",		className: cssClass.CHEST1},
-		{x:28, y:3,  type:"key",		className: cssClass.KEY1},
-		{x:17, y:5,  type:"treasure",	className: cssClass.TREASURE1},
-		{x:2,  y:17, type:"treasure",	className: cssClass.TREASURE2},
-		{x:10, y:16, type:"ring",		className: cssClass.RING1}
-	],
-
-	level2:[
 		{x:10, y:18, type:"monster", 	className: cssClass.MONSTER1},
 		{x:12, y:18, type:"monster",	className: cssClass.MONSTER1},
 		{x:25, y:15, type:"monster",	className: cssClass.MONSTER2},

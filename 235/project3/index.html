@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Chronomancer's Chamber</title>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link href="styles/main.css" rel="stylesheet">
+	<script src="scripts/final/data.js"></script>
+	<style>
+		audio{display:none;}
+	</style>
+</head>
+    <body>
+	<div id="Menu">
+		<h1>Chronomancer's Chamber</h1>
+		<button id="explorerButton">Map Explorer</button>
+		<button id="levelEditorButton">Level Editor</button>
+	</div>
+
+	<div id="Explorer">
+		<h1>Chronomancer's Chamber<br>Map Explorer</h1>
+		<div id="explorerGrid">
+
+		</div>
+		<audio id="effectAudio" src="sounds/grunt.wav" controls></audio>
+		<script src="scripts/final/game.js"></script>
+	</div>
+
+	<div id="Editor">
+		<div id="levelEditorGrid">
+		</div>
+		<h1>Chronomancer's Chamber<br>Level Editor</h1>
+		<select id="tileChooser">
+			<option value="erase" selected>Erase</option>
+			<option value="wall" selected>Wall</option>
+			<option value="floor">Floor</option>
+			<option value="grass">Grass</option>
+			<option value="water">Water</option>
+			<option value="ground">ground</option>
+			<option value="rock">rock</option>
+		</select>
+		<button id="editorOutputButton">Output Level Data</button>
+		<button id="leaveEditorButton">Back to Main Menu</button>
+		<div id="outputtedLevelData">
+		</div>
+		<script src="scripts/final/leveleditor.js"></script>
+	</div>
+	<script src="scripts/final/menu.js"></script>
+    </body>
+</html>
