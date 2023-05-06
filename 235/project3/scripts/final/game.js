@@ -62,6 +62,8 @@ window.onload = ()=>{
 
 function nextLevel()
 {
+	clearGrid();
+	clearLevel();
 	currentGameWorld = gameworld["room" + currentLevelNumber];
 	let numCols = currentGameWorld[0].length;
 	let numRows = currentGameWorld.length;
@@ -109,26 +111,34 @@ function loadLevel(levelNum = 1){
 	const levelObjects = allGameObjects["level" + levelNum];
 	
 	// loop through this level's objects ... 
-	for (let obj of levelObjects){
-		const clone = Object.assign({}, obj); 		// clone the object
-		clone.element = node.cloneNode(true); 		// clone the element
-		clone.element.classList.add(obj.className); // add the className so we see the right image
-		currentGameObjects.push(clone);				// add to currentGameObjects array  (so it gets moved onto the map)
-		container.appendChild(clone.element);		// add to DOM tree (so we can see it!)
+
+	console.log(levelObjects);
+	if(levelObjects != null)
+	{
+		for (let obj of levelObjects){
+			const clone = Object.assign({}, obj); 		// clone the object
+			clone.element = node.cloneNode(true); 		// clone the element
+			clone.element.classList.add(obj.className); // add the className so we see the right image
+			currentGameObjects.push(clone);				// add to currentGameObjects array  (so it gets moved onto the map)
+			container.appendChild(clone.element);		// add to DOM tree (so we can see it!)
+		}
 	}
+
 }
 
 function clearGrid() {
 	const numRows = cells.length;
-	for (let row = 0; row < numRows; row++) {
+	for (let row = 0; row < numRows; row++) 
+	{
 	  const numCols = cells[row].length;
-	  for (let col = 0; col < numCols; col++) {
+	  for (let col = 0; col < numCols; col++) 
+	  {
 		const cell = cells[row][col];
 		cell.parentNode.removeChild(cell);
 	  }
 	}
 	cells = [];
-  }
+}
 
   function clearLevel() {
     // Remove all game objects from the container
@@ -228,6 +238,7 @@ function movePlayer(e){
 			return true;
 		}else{
 			effectAudio.play();
+			checkLoader(nextX,nextY);
 			return false;
 		}
 	}
@@ -235,15 +246,47 @@ function movePlayer(e){
 	function checkLoader(nextX,nextY){
 		let loader = gameworld["levelLoader" + currentLevelNumber];
 
-		
+		const rowWidth = currentGameWorld[0].length - 1; // get the length of the first row
+		const columnHeight = currentGameWorld.length - 1; // get the number of rows in the array
 
-		if(nextX == 0){
+
+		console.log(`Row width: ${rowWidth}`);
+		console.log(`Column height: ${columnHeight}`);
+		console.log(`XY: ${nextX},${nextY}`);
+
+		if(nextY == 0) // Up
+		{
+			if(loader[0] != 0)
+			{
+				currentLevelNumber += loader[0];
+				console.log("Loading Level: " + currentLevelNumber);
+				nextLevel();
+			}
+		}
+		if(nextY == columnHeight) // Down
+		{
+			if(loader[1] != 0)
+			{
+				currentLevelNumber += loader[1];
+				console.log("Loading Level: " + currentLevelNumber);
+				nextLevel();
+			}
+		}
+		if(nextX == 0) // Left
+		{
 			if(loader[2] != 0)
 			{
-				console.log("Loading Level");
-				currentLevelNumber++;
-				clearGrid();
-				clearLevel();
+				currentLevelNumber += loader[2];
+				console.log("Loading Level: " + currentLevelNumber);
+				nextLevel();
+			}
+		}
+		if(nextX == rowWidth) // Right
+		{
+			if(loader[3] != 0)
+			{
+				currentLevelNumber += loader[3];
+				console.log("Loading Level: " + currentLevelNumber);
 				nextLevel();
 			}
 		}
