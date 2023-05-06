@@ -76,7 +76,76 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case "rock":
                 tileData = 5;
+                break;                
+            case "floor_grass":
+                tileData = 6;
+                break;                
+            case "floor_tree":
+                tileData = 7;
+                break;                
+            case "floor_boulder":
+                tileData = 8;
+                break;                
+            case "floor_cliff":
+                tileData = 9;
+                break;                
+            case "floor_dead_tree":
+                tileData = 10;
+                break;                
+            case "dungeon_entrance":
+                tileData = 11;
+                break;                
+            case "dungen_top":
+                tileData = 12;
+                break;                
+            case "grass_cliff":
+                tileData = 13;
                 break;
+            case "grass_tree":
+                tileData = 14;
+                break;
+            case "grass_boulder":
+                tileData = 15;
+                break;
+            case "grass_flowers_red":
+                tileData = 16;
+                break;
+            case "grass_flowers_yellow":
+                tileData = 17;
+                break;
+            case "ground_cliff":
+                tileData = 18;
+                break;                
+            case "ground_grass":
+                tileData = 19;
+                break;                
+            case "ground_boulder":
+                tileData = 20;
+                break;                
+            case "ground_door":
+                tileData = 21;
+                break;                
+            case "ground_wave":
+                tileData = 22;
+                break;                
+            case "ground_shield":
+                tileData = 23;
+            break;
+            case "rock_cliff":
+                tileData = 24;
+            break;
+            case "rock_tree":
+                tileData = 25;
+            break;
+            case "rock_grass":
+                tileData = 26;
+            break;
+            case "rock_wave":
+                tileData = 27;
+            break;
+            case "grass_grass":
+                tileData = 28;
+            break;
         }
 
         levelData[row][col] = tileData;

@@ -23,7 +23,36 @@ const worldTile = Object.freeze({
 	GRASS: 		2,
 	WATER: 		3,
 	GROUND: 	4,
-	ROCK: 		5
+	ROCK: 		5,
+	FLOOR_GRASS:6,
+	FLOOR_TREE:7,
+	FLOOR_BOULDER:8,
+	FLOOR_CLIFF:9,
+	FLOOR_TREE_DEAD:10,
+	DUNGEON_ENTRANCE:11,
+	DUNGEON_TOP:12,
+	GRASS_CLIFF:13,
+	GRASS_TREE:14,
+	GRASS_BOULDER:15,
+	GRASS_FLOWERS_RED:16,
+	GRASS_FLOWERS_YELLOW:17,
+	GROUND_CLIFF:18,
+	GROUND_GRASS:19,
+	GROUND_BOULDER:20,
+	GROUND_DOOR:21,
+	GROUND_WAVE:22,
+	GROUND_SHIELD:23,
+	ROCK_CLIFF:24,
+	ROCK_TREE:25,
+	ROCK_GRASS:26,
+	ROCK_WAVE:27,
+	GRASS_GRASS:28,
+	DUNGEON_ROCKS:29,
+	DUNGEON_STAIRS:30,
+	DUNGEON_LUMP:31,
+	DUNGEON_HAMMER:32,
+	DUNGEON_BLOOD:33,
+	DEBUG:	1000
 });
 
 // the "grunt" sound that plays when the player attempts to move into a wall or water square
@@ -181,6 +210,87 @@ function drawGrid(array){
 				case worldTile.ROCK:
 				element.classList.add("rock");
 				break;
+
+				case worldTile.FLOOR_GRASS:
+					element.classList.add("floor_grass");
+				break;
+
+				
+				case worldTile.FLOOR_TREE:
+					element.classList.add("floor_tree");
+				break;
+
+				case worldTile.FLOOR_BOULDER:
+					element.classList.add("floor_boulder");
+				break;
+
+				case worldTile.FLOOR_CLIFF:
+					element.classList.add("floor_cliff");
+				break;
+
+				case worldTile.FLOOR_TREE_DEAD:
+					element.classList.add("floor_dead_tree");
+				break;
+
+				
+				case worldTile.DUNGEON_ENTRANCE:
+					element.classList.add("dungeon_entrance");
+				break;
+
+				
+				case worldTile.DUNGEON_TOP:
+					element.classList.add("dungen_top");
+				break;
+
+				case worldTile.GRASS_CLIFF:
+					element.classList.add("grass_cliff");
+				break;
+				case worldTile.GRASS_TREE:
+					element.classList.add("grass_tree");
+				break;
+				case worldTile.GRASS_BOULDER:
+					element.classList.add("grass_boulder");
+				break;
+				case worldTile.GRASS_FLOWERS_RED:
+					element.classList.add("grass_flowers_red");
+				break;
+				case worldTile.GRASS_FLOWERS_YELLOW:
+					element.classList.add("grass_flowers_yellow");
+				break;
+				case worldTile.GROUND_CLIFF:
+					element.classList.add("ground_cliff");
+				break;
+				case worldTile.GROUND_GRASS:
+					element.classList.add("ground_grass");
+				break;
+				case worldTile.GROUND_BOULDER:
+					element.classList.add("ground_boulder");
+				break;
+				case worldTile.GROUND_DOOR:
+					element.classList.add("ground_door");
+				break;
+				case worldTile.GROUND_WAVE:
+					element.classList.add("ground_wave");
+				break;
+				case worldTile.GROUND_SHIELD:
+					element.classList.add("ground_shield");
+				break;
+				case worldTile.ROCK_CLIFF:
+					element.classList.add("rock_cliff");
+				break;
+				case worldTile.ROCK_TREE:
+					element.classList.add("rock_tree");
+				break;
+				case worldTile.ROCK_GRASS:
+					element.classList.add("rock_grass");
+				break;
+				case worldTile.ROCK_WAVE:
+					element.classList.add("rock_wave");
+				break;
+				case worldTile.GRASS_GRASS:
+					element.classList.add("grass_grass");
+				break;
+
 			}
 		}
 	}
@@ -233,7 +343,11 @@ function movePlayer(e){
 	function checkIsLegalMove(nextX,nextY){
 		let nextTile = currentGameWorld[nextY][nextX];
 
-		if (nextTile != worldTile.WALL && nextTile != worldTile.WATER){
+		if (nextTile != worldTile.GRASS && 
+			nextTile != worldTile.GROUND && 
+			nextTile != worldTile.ROCK && 
+			nextTile != worldTile.WALL
+			){
 			checkLoader(nextX,nextY);
 			return true;
 		}else{

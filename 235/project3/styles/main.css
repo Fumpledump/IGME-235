@@ -194,6 +194,167 @@ span.rock{
 	background-position: -160px -160px;
 }
 
+span.floor_grass{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -192px -192px;
+}
+
+span.floor_tree{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -224px -224px;
+}
+
+span.floor_boulder{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -256px -256px;
+}
+
+span.floor_cliff{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -288px -288px;
+}
+
+span.floor_dead_tree{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -320px -320px;
+}
+
+span.dungeon_entrance{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -352px -352px;
+}
+
+span.dungen_top{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -384px -384px;
+}
+
+span.grass_cliff{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -416px -416px;
+}
+
+span.grass_tree{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -448px -448px;
+}
+
+span.grass_boulder{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -480px -480px;
+}
+
+span.grass_flowers_red{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -512px -512px;
+}
+
+span.grass_flowers_yellow{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -544px -544px;
+}
+
+span.ground_cliff{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -576px -576px;
+}
+
+span.ground_grass{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -608px -608px;
+}
+
+span.ground_boulder{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -640px -640px;
+}
+
+span.ground_door{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -672px -672px;
+}
+
+span.ground_wave{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -704px -704px;
+}
+
+span.ground_shield{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -736px -736px;
+}
+
+span.rock_cliff{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -768px -768px;
+}
+
+span.rock_tree{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -800px -800px;
+}
+
+span.rock_grass{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -832px -832px;
+}
+
+span.rock_wave{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -864px -864px;
+}
+
+span.grass_grass{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -896px -896px;
+}
+
 #Explorer span.cell{
 	height:32px;
 	width:32px;
