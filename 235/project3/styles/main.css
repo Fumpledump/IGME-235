@@ -355,6 +355,104 @@ span.grass_grass{
 	background-position: -896px -896px;
 }
 
+span.dungeon_rocks{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -928px -928px;
+}
+
+span.dungeon_stairs{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -960px -960px;
+}
+
+span.dungeon_lump{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -992px -992px;
+}
+
+span.dungeon_hammer{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1024px -1024px;
+}
+
+span.dungeon_blood{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1056px -1056px;
+}
+
+span.wall_glow{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1088px -1088px;
+}
+
+span.wall_books{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1120px -1120px;
+}
+
+span.wall_door{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1152px -1152px;
+}
+
+span.wall_timer{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1184px -1184px;
+}
+
+span.wall_eye{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1216px -1216px;
+}
+
+span.wall_locked{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1248px -1248px;
+}
+
+span.wall_mouse{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1280px -1280px;
+}
+
+span.ground_tree{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1312px -1312px;
+}
+
+span.wire_1{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1344px -1344px;
+}
+
 #Explorer span.cell{
 	height:32px;
 	width:32px;

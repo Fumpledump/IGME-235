@@ -52,6 +52,15 @@ const worldTile = Object.freeze({
 	DUNGEON_LUMP:31,
 	DUNGEON_HAMMER:32,
 	DUNGEON_BLOOD:33,
+	WALL_GLOW:34,
+	WALL_BOOKS:35,
+	WALL_DOOR:36,
+	WALL_TIMER:37,
+	WALL_EYE:38,
+	WALL_LOCKED:39,
+	WALL_MOUSE:40,
+	GROUND_TREE:41,
+	WIRE_1:42,
 	DEBUG:	1000
 });
 
@@ -290,7 +299,48 @@ function drawGrid(array){
 				case worldTile.GRASS_GRASS:
 					element.classList.add("grass_grass");
 				break;
-
+				case worldTile.DUNGEON_ROCKS:
+					element.classList.add("dungeon_rocks");
+				break;
+				case worldTile.DUNGEON_STAIRS:
+					element.classList.add("dungeon_stairs");
+				break;
+				case worldTile.DUNGEON_LUMP:
+					element.classList.add("dungeon_lump");
+				break;
+				case worldTile.DUNGEON_HAMMER:
+					element.classList.add("dungeon_hammer");
+				break;
+				case worldTile.DUNGEON_BLOOD:
+					element.classList.add("dungeon_blood");
+				break;
+				case worldTile.WALL_GLOW:
+					element.classList.add("wall_glow");
+				break;
+				case worldTile.WALL_BOOKS:
+					element.classList.add("wall_books");
+				break;
+				case worldTile.WALL_DOOR:
+					element.classList.add("wall_door");
+				break;
+				case worldTile.WALL_TIMER:
+					element.classList.add("wall_timer");
+				break;
+				case worldTile.WALL_EYE:
+					element.classList.add("wall_eye");
+				break;
+				case worldTile.WALL_LOCKED:
+					element.classList.add("wall_locked");
+				break;
+				case worldTile.WALL_MOUSE:
+					element.classList.add("wall_mouse");
+				break;
+				case worldTile.GROUND_TREE:
+					element.classList.add("ground_tree");
+				break;
+				case worldTile.WIRE_1:
+					element.classList.add("wire_1");
+				break;
 			}
 		}
 	}

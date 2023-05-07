@@ -146,6 +146,48 @@ document.addEventListener('DOMContentLoaded', () => {
             case "grass_grass":
                 tileData = 28;
             break;
+            case "dungeon_rocks":
+                tileData = 29;
+            break;
+            case "dungeon_stairs":
+                tileData = 30;
+            break;
+            case "dungeon_lump":
+                tileData = 31;
+            break;
+            case "dungeon_hammer":
+                tileData = 32;
+            break;
+            case "dungeon_blood":
+                tileData = 33;
+            break;
+            case "wall_glow":
+                tileData = 34;
+            break;
+            case "wall_books":
+                tileData = 35;
+            break;
+            case "wall_door":
+                tileData = 36;
+            break;
+            case "wall_timer":
+                tileData = 37;
+            break;
+            case "wall_eye":
+                tileData = 38;
+            break;
+            case "wall_locked":
+                tileData = 39;
+            break;
+            case "wall_mouse":
+                tileData = 40;
+            break;
+            case "ground_tree":
+                tileData = 41;
+            break;
+            case "wire_1":
+                tileData = 42;
+            break;
         }
 
         levelData[row][col] = tileData;
