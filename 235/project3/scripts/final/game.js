@@ -61,11 +61,42 @@ const worldTile = Object.freeze({
 	WALL_MOUSE:40,
 	GROUND_TREE:41,
 	WIRE_1:42,
+	WIRE_2:43,
+	WIRE_3:44,
+	WIRE_4:45,
+	WIRE_5:46,
+	WIRE_6:47,
+	WIRE_7:48,
+	WIRE_8:49,
+	WIRE_9:50,
+	WIRE_10:51,
+	WIRE_11:52,
+	WIRE_12:53,
+	WIRE_13:54,
+	WIRE_14:55,
+	WIRE_15:56,
+	WIRE_16:57,
+	WIRE_17:58,
+	WIRE_18:59,
+	WIRE_19:60,
+	WIRE_20:61,
+	WIRE_21:62,
+	WIRE_22:63,
+	WIRE_23:64,
+	WIRE_24:65,
+	WIRE_25:66,
+	WIRE_26:67,
+	WIRE_27:68,
+	WIRE_28:69,
+	WIRE_29:70,
+	DUNGEON_STAIRS_FLIPPED:71,
 	DEBUG:	1000
 });
 
 // the "grunt" sound that plays when the player attempts to move into a wall or water square
 let effectAudio = undefined;
+let themeSong = undefined;
+
 
 // level data is over in gamedata.js
 let currentLevelNumber = 1;
@@ -95,6 +126,8 @@ window.onload = ()=>{
 	drawGameObjects(currentGameObjects);
 	effectAudio = document.querySelector("#effectAudio");
 	effectAudio.volume = 0.2;
+	themeSong = document.querySelector("#themeSong");
+	themeSong.volume = 0.2;
 	setupEvents();
 }
 
@@ -341,6 +374,93 @@ function drawGrid(array){
 				case worldTile.WIRE_1:
 					element.classList.add("wire_1");
 				break;
+				case worldTile.WIRE_2:
+					element.classList.add("wire_2");
+				break;
+				case worldTile.WIRE_3:
+					element.classList.add("wire_3");
+				break;
+				case worldTile.WIRE_4:
+					element.classList.add("wire_4");
+				break;
+				case worldTile.WIRE_5:
+					element.classList.add("wire_5");
+				break;
+				case worldTile.WIRE_6:
+					element.classList.add("wire_6");
+				break;
+				case worldTile.WIRE_7:
+					element.classList.add("wire_7");
+				break;
+				case worldTile.WIRE_8:
+					element.classList.add("wire_8");
+				break;
+				case worldTile.WIRE_9:
+					element.classList.add("wire_9");
+				break;
+				case worldTile.WIRE_10:
+					element.classList.add("wire_10");
+				break;
+				case worldTile.WIRE_11:
+					element.classList.add("wire_11");
+				break;
+				case worldTile.WIRE_12:
+					element.classList.add("wire_12");
+				break;
+				case worldTile.WIRE_13:
+					element.classList.add("wire_13");
+				break;
+				case worldTile.WIRE_14:
+					element.classList.add("wire_14");
+				break;
+				case worldTile.WIRE_15:
+					element.classList.add("wire_15");
+				break;
+				case worldTile.WIRE_16:
+					element.classList.add("wire_16");
+				break;
+				case worldTile.WIRE_17:
+					element.classList.add("wire_17");
+				break;
+				case worldTile.WIRE_18:
+					element.classList.add("wire_18");
+				break;
+				case worldTile.WIRE_19:
+					element.classList.add("wire_19");
+				break;
+				case worldTile.WIRE_20:
+					element.classList.add("wire_20");
+				break;
+				case worldTile.WIRE_21:
+					element.classList.add("wire_21");
+				break;
+				case worldTile.WIRE_22:
+					element.classList.add("wire_22");
+				break;
+				case worldTile.WIRE_23:
+					element.classList.add("wire_23");
+				break;
+				case worldTile.WIRE_24:
+					element.classList.add("wire_24");
+				break;
+				case worldTile.WIRE_25:
+					element.classList.add("wire_25");
+				break;
+				case worldTile.WIRE_26:
+					element.classList.add("wire_26");
+				break;
+				case worldTile.WIRE_27:
+					element.classList.add("wire_27");
+				break;
+				case worldTile.WIRE_28:
+					element.classList.add("wire_28");
+				break;
+				case worldTile.WIRE_29:
+					element.classList.add("wire_29");
+				break;
+				case worldTile.DUNGEON_STAIRS_FLIPPED:
+					element.classList.add("dungeon_stairs_flipped");
+				break;
 			}
 		}
 	}
@@ -393,16 +513,23 @@ function movePlayer(e){
 	function checkIsLegalMove(nextX,nextY){
 		let nextTile = currentGameWorld[nextY][nextX];
 
-		if (nextTile != worldTile.GRASS && 
+		if(nextTile == worldTile.DUNGEON_ENTRANCE)
+		{
+			enterDungeon();
+		}else if(nextTile == worldTile.DUNGEON_STAIRS || nextTile == worldTile.DUNGEON_STAIRS_FLIPPED)
+		{
+			exitDungeon();
+		}else if (nextTile != worldTile.GRASS && 
 			nextTile != worldTile.GROUND && 
 			nextTile != worldTile.ROCK && 
+			nextTile != worldTile.WALL_GLOW && 
 			nextTile != worldTile.WALL
 			){
 			checkLoader(nextX,nextY);
 			return true;
 		}else{
 			effectAudio.play();
-			checkLoader(nextX,nextY);
+			//checkLoader(nextX,nextY);
 			return false;
 		}
 	}
@@ -454,6 +581,30 @@ function movePlayer(e){
 				nextLevel();
 			}
 		}
+	}
+	function enterDungeon()
+	{
+		// Play Song
+		themeSong.loop = true;
+		themeSong.play();
+
+		// Load Level
+		currentLevelNumber++;
+		console.log("Entering Dungeon");
+		nextLevel();
+		
+	}
+	function exitDungeon()
+	{
+		// Stop Theme Song
+		themeSong.pause();
+		themeSong.currentTime = 0;
+
+
+		// Load Level
+		currentLevelNumber--;
+		console.log("Exiting Dungeon");
+		nextLevel();
 	}
 }
 

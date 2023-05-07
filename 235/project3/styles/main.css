@@ -453,6 +453,183 @@ span.wire_1{
 	background-position: -1344px -1344px;
 }
 
+span.wire_2{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1376px -1376px;
+}
+
+span.wire_3{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1408px -1408px;
+}
+
+span.wire_4{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1440px -1440px;
+}
+span.wire_5{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1472px -1472px;
+}
+span.wire_6{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1504px -1504px;
+}
+span.wire_7{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1536px -1536px;
+}
+span.wire_8{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1568px -1568px;
+}
+span.wire_9{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1600px -1600px;
+}
+span.wire_10{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1632px -1632px;
+}
+span.wire_11{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1664px -1664px;
+}
+span.wire_12{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1696px -1696px;
+}
+span.wire_13{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1728px -1728px;
+}
+span.wire_14{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1760px -1760px;
+}
+span.wire_15{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1792px -1792px;
+}
+span.wire_16{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1824px -1824px;
+}
+span.wire_17{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1856px -1856px;
+}
+span.wire_18{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1888px -1888px;
+}
+span.wire_19{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1920px -1920px;
+}
+span.wire_20{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1952px -1952px;
+}
+span.wire_21{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1984px -1984px;
+}
+span.wire_22{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -1344px -1344px;
+}
+span.wire_23{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2016px -2016px;
+}
+span.wire_24{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2048px -2048px;
+}
+span.wire_25{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2080px -2080px;
+}
+span.wire_26{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2112px -2112px;
+}
+span.wire_27{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2144px -2144px;
+}
+span.wire_28{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2176px -2176px;
+}
+span.wire_29{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2208px -2208px;
+}
+span.dungeon_stairs_flipped{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2240px -2240px;
+}
+
 #Explorer span.cell{
 	height:32px;
 	width:32px;

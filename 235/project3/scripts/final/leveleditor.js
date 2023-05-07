@@ -188,6 +188,93 @@ document.addEventListener('DOMContentLoaded', () => {
             case "wire_1":
                 tileData = 42;
             break;
+            case "wire_2":
+                tileData = 43;
+            break;
+            case "wire_3":
+                tileData = 44;
+            break;
+            case "wire_4":
+                tileData = 45;
+            break;
+            case "wire_5":
+                tileData = 46;
+            break;
+            case "wire_6":
+                tileData = 47;
+            break;
+            case "wire_7":
+                tileData = 48;
+            break;
+            case "wire_8":
+                tileData = 49;
+            break;
+            case "wire_9":
+                tileData = 50;
+            break;
+            case "wire_10":
+                tileData = 51;
+            break;
+            case "wire_11":
+                tileData = 52;
+            break;
+            case "wire_12":
+                tileData = 53;
+            break;
+            case "wire_13":
+                tileData = 54;
+            break;
+            case "wire_14":
+                tileData = 55;
+            break;
+            case "wire_15":
+                tileData = 56;
+            break;
+            case "wire_16":
+                tileData = 57;
+            break;
+            case "wire_17":
+                tileData = 58;
+            break;
+            case "wire_18":
+                tileData = 59;
+            break;
+            case "wire_19":
+                tileData = 60;
+            break;
+            case "wire_20":
+                tileData = 61;
+            break;
+            case "wire_21":
+                tileData = 62;
+            break;
+            case "wire_22":
+                tileData = 63;
+            break;
+            case "wire_23":
+                tileData = 64;
+            break;
+            case "wire_24":
+                tileData = 65;
+            break;
+            case "wire_25":
+                tileData = 66;
+            break;
+            case "wire_26":
+                tileData = 67;
+            break;
+            case "wire_27":
+                tileData = 68;
+            break;
+            case "wire_28":
+                tileData = 69;
+            break;
+            case "wire_29":
+                tileData = 70;
+            break;
+            case "dungeon_stairs_flipped":
+                tileData = 71;
+            break;
         }
 
         levelData[row][col] = tileData;
