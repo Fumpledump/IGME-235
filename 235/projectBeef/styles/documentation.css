@@ -1,0 +1,37 @@
+/* Set the font family and background color of the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #813a7e;
+  }
+  
+  /* Style the main heading */
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* Style the section headings */
+  h2 {
+    font-size: 24px;
+    margin: 30px 0 10px;
+  }
+  
+  /* Style the paragraphs */
+  p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the link in the paragraph */
+  a {
+    color: #1eb4ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  

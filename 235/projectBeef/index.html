@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Chronomancer's Chamber</title>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link href="styles/main.css" rel="stylesheet">
+	<script src="scripts/final/data.js"></script>
+	<style>
+		audio{display:none;}
+	</style>
+</head>
+    <body>
+	<div id="Menu">
+		<h1>Chronomancer's Chamber</h1>
+		<button id="explorerButton">Map Explorer</button>
+		<button id="levelEditorButton">Level Editor</button>
+		<a class="button" href="https://www.youtube.com/watch?v=1GHHbLXzhVI" target="_blank">Video</a>
+		<a class="button" href="documentation.html" target="_blank">Documentation</a>
+		<a class="button" href="prototype.html" target="_blank">Prototype</a>
+		<a class="button" href="proposal.html" target="_blank">Proposal</a>
+		<a class="button" href="https://fumpledump.itch.io/chronomancers-chamber" target="_blank">Itch.io</a>
+	</div>
+
+	<div id="Explorer">
+		<h1>Chronomancer's Chamber<br>Map Explorer</h1>
+		<h2>WASD to Move</h2>
+		<div id="explorerGrid">
+		</div>
+		<button id="leaveExplorerButton">Back to Main Menu</button>
+		<audio id="effectAudio" src="sounds/grunt.wav" controls></audio>
+		<audio id="themeSong" src="sounds/theme_song.mp3" controls></audio>
+		<script src="scripts/final/game.js"></script>
+	</div>
+
+	<div id="Editor">
+		<div id="levelEditorGrid">
+		</div>
+		<h1>Chronomancer's Chamber<br>Level Editor</h1>
+		<select id="tileChooser">
+			<option value="erase">Erase</option>
+			<option value="wall" selected>Wall</option>
+			<option value="floor">Floor</option>
+			<option value="grass">Grass</option>
+			<option value="water">Water</option>
+			<option value="ground">Ground</option>
+			<option value="rock">Rock</option>
+			<option value="floor_grass">Floor Grass</option>
+			<option value="floor_tree">Floor Tree</option>
+			<option value="floor_boulder">Floor Boulder</option>
+			<option value="floor_cliff">Floor Cliff</option>
+			<option value="floor_dead_tree">Floor Dead Tree</option>
+			<option value="dungeon_entrance">Dungeon Entrance</option>
+			<option value="dungen_top">Dungeon Top</option>
+			<option value="grass_cliff">Grass Cliff</option>
+			<option value="grass_grass">Grass Grass</option>
+			<option value="grass_tree">Grass Tree</option>
+			<option value="grass_boulder">Grass Boulder</option>
+			<option value="grass_flowers_red">Red Flowers</option>
+			<option value="grass_flowers_yellow">Yellow Flowers</option>
+			<option value="ground_cliff">Ground Cliff</option>
+			<option value="ground_tree">Ground Tree</option>
+			<option value="ground_grass">Ground Grass</option>
+			<option value="ground_boulder">Ground Boulder</option>
+			<option value="ground_door">Ground Door</option>
+			<option value="ground_wave">Ground Wave</option>
+			<option value="ground_shield">Ground Shield</option>
+			<option value="rock_cliff">Rock Cliff</option>
+			<option value="rock_tree">Rock Tree</option>
+			<option value="rock_grass">Rock Grass</option>
+			<option value="rock_wave">Rock Wave</option>
+			<option value="dungeon_rocks">Dungeon Rocks</option>
+			<option value="dungeon_stairs">Dungeon Stairs Right</option>
+			<option value="dungeon_stairs_flipped">Dungeon Stairs Left</option>
+			<option value="dungeon_lump">Dungeon Lump</option>
+			<option value="dungeon_hammer">Dungeon Hammer</option>
+			<option value="dungeon_blood">Dungeon Blood</option>
+			<option value="dungeon_generator">Dungeon Generator</option>
+			<option value="wall_glow">Wall Glow</option>
+			<option value="wall_books">Wall Books</option>
+			<option value="wall_door">Wall Door</option>
+			<option value="wall_doorway">Wall Door Proper</option>
+			<option value="wall_timer">Wall Timer</option>
+			<option value="wall_eye">Wall Eye</option>
+			<option value="wall_locked">Wall Locked</option>
+			<option value="wall_mouse">Wall Mouse</option>
+			<option value="wire_1">Wire 1</option>
+			<option value="wire_2">Wire 2</option>
+			<option value="wire_3">Wire 3</option>
+			<option value="wire_4">Wire 4</option>
+			<option value="wire_5">Wire 5</option>
+			<option value="wire_6">Wire 6</option>
+			<option value="wire_7">Wire 7</option>
+			<option value="wire_8">Wire 8</option>
+			<option value="wire_9">Wire 9</option>
+			<option value="wire_10">Wire 10</option>
+			<option value="wire_11">Wire 11</option>
+			<option value="wire_12">Wire 12</option>
+			<option value="wire_13">Wire 13</option>
+			<option value="wire_14">Wire 14</option>
+			<option value="wire_15">Wire 15</option>
+			<option value="wire_16">Wire 16</option>
+			<option value="wire_17">Wire 17</option>
+			<option value="wire_18">Wire 18</option>
+			<option value="wire_19">Wire 19</option>
+			<option value="wire_20">Wire 20</option>
+			<option value="wire_21">Wire 21</option>
+			<option value="wire_22">Wire 22</option>
+			<option value="wire_23">Wire 23</option>
+			<option value="wire_24">Wire 24</option>
+			<option value="wire_25">Wire 25</option>
+			<option value="wire_26">Wire 26</option>
+			<option value="wire_27">Wire 27</option>
+			<option value="wire_28">Wire 28</option>
+			<option value="wire_29">Wire 29</option>
+			<option value="wire_30">Wire 30</option>
+			<option value="wire_31">Wire 31</option>
+		</select>
+		<button id="editorOutputButton">Output Level Data</button>
+		<button id="leaveEditorButton">Back to Main Menu</button>
+		<div id="outputtedLevelData">
+		</div>
+		<script src="scripts/final/leveleditor.js"></script>
+	</div>
+	<script src="scripts/final/menu.js"></script>
+    </body>
+</html>
