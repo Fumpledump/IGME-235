@@ -274,6 +274,18 @@ document.addEventListener('DOMContentLoaded', () => {
             case "dungeon_stairs_flipped":
                 tileData = 71;
             break;
+            case "dungeon_generator":
+                tileData = 72;
+            break;
+            case "wall_doorway":
+                tileData = 73;
+            break;
+            case "wire_30":
+                tileData = 74;
+            break;
+            case "wire_31":
+                tileData = 75;
+            break;
         }
 
         levelData[row][col] = tileData;

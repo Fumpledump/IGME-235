@@ -90,6 +90,10 @@ const worldTile = Object.freeze({
 	WIRE_28:69,
 	WIRE_29:70,
 	DUNGEON_STAIRS_FLIPPED:71,
+	DUNGEON_GENERATOR:72,
+	WALL_DOORWAY:73,
+	WIRE_30:74,
+	WIRE_31:75,
 	DEBUG:	1000
 });
 
@@ -183,7 +187,6 @@ function loadLevel(levelNum = 1){
 	
 	// loop through this level's objects ... 
 
-	console.log(levelObjects);
 	if(levelObjects != null)
 	{
 		for (let obj of levelObjects){
@@ -460,6 +463,18 @@ function drawGrid(array){
 				break;
 				case worldTile.DUNGEON_STAIRS_FLIPPED:
 					element.classList.add("dungeon_stairs_flipped");
+				break;
+				case worldTile.DUNGEON_GENERATOR:
+					element.classList.add("dungeon_generator");
+				break;
+				case worldTile.WALL_DOORWAY:
+					element.classList.add("wall_doorway");
+				break;
+				case worldTile.WIRE_30:
+					element.classList.add("wire_30");
+				break;
+				case worldTile.WIRE_31:
+					element.classList.add("wire_31");
 				break;
 			}
 		}

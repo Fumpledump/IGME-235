@@ -18,7 +18,7 @@ body
   #Menu h1 {
 	font-family: 'Press Start 2P', cursive;
 	font-size: 48px;
-	margin-top: 0;
+	margin-bottom: 5;
   }
   
   button {
@@ -28,7 +28,8 @@ body
 	color: #333;
 	cursor: pointer;
 	font-size: 18px;
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 	padding: 10px 20px;
 	font-family: 'Press Start 2P', cursive;
   }
@@ -40,11 +41,16 @@ body
 	color: #333;
 	cursor: pointer;
 	font-size: 18px;
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 	padding: 10px 20px;
 	font-family: 'Press Start 2P', cursive;
 	text-decoration: none;
 
+  }
+
+  .button:hover {
+	background-color: #ddd;
   }
   
   button:hover {
@@ -68,7 +74,7 @@ body
 
 #tileChooser {
 	position: absolute;
-	top: 65px;
+	top: 100px;
 	left: 800px;
 	margin-left: 15%;
 	background-color: #ffffff;
@@ -82,7 +88,7 @@ body
 #editorOutputButton
 {
 	position: absolute;
-	top: 100px;
+	top: 140px;
 	left:800px;
 	margin-left: 15%;
 }
@@ -90,7 +96,7 @@ body
 #leaveEditorButton
 {
 	position: absolute;
-	top: 150px;
+	top: 200px;
 	left:800px;
 	margin-left: 15%;
 }
@@ -98,7 +104,7 @@ body
 #outputtedLevelData
 {
 	position: absolute;
-	top: 240px;
+	top: 270px;
 	left:800px;
 	margin-left: 15%;
 	color: #ffffff;
@@ -157,9 +163,10 @@ body
 	position:absolute;
 	font-size:1.3em;
 	top: 0;
-	left:1000px;
+	left:800px;
 	line-height:1.5em;
 	color: #ffffff;
+	margin-left: 15%;
 }
 
 #Explorer h2{
@@ -167,10 +174,11 @@ body
 	display: inline-block;
 	position:absolute;
 	font-size:1.1em;
-	top: 65px;
-	left:1000px;
+	top: 100px;
+	left:800px;
 	line-height:1.5em;
 	color: #f2ff00;
+	margin-left: 15%;
 }
 
 #explorerGrid{
@@ -185,8 +193,8 @@ body
 #leaveExplorerButton
 {
 	position: absolute;
-	top: 110px;
-	left:710px;
+	top: 180px;
+	left:800px;
 	margin-left: 15%;
 }
 
@@ -668,6 +676,30 @@ span.dungeon_stairs_flipped{
 	background: url(../images/tiles.png);
 	background-position: -2240px -2240px;
 }
+span.dungeon_generator{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2272px -2272px;
+}
+span.wall_doorway{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2304px -2304px;
+}
+span.wire_30{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2336px -2336px;
+}
+span.wire_31{
+	width:32px;
+	height:32px;
+	background: url(../images/tiles.png);
+	background-position: -2368px -2368px;
+}
 
 #Explorer span.cell{
 	height:32px;
@@ -748,23 +780,44 @@ span.player{
 	transition-duration: .25s;
 }
 
-span.ring1{ 
+span.journal{ 
 	position:absolute;
 	left: -100px;
 	top: -100px;
-	background-position: -128px 0px;
+	background-position: -96px -32px;
 }
 
 span.treasure1{ 
 	position:absolute;
 	left: -100px;
 	top: -100px;
-	background-position: -448px -448px;
+	background-position: -128px 0px;
 }
 
 span.treasure2{ 
 	position:absolute;
 	left: -100px;
 	top: -100px;
-	background-position: -928px -448px;
+	background-position: -128px -32px;
+}
+
+span.skull{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	background-position: -128px -64px;
+}
+
+span.cheese{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	background-position: 0px -64px;
+}
+
+span.npc1{ 
+	position:absolute;
+	left: -100px;
+	top: -100px;
+	background-position: -64px -32px;
 }
