@@ -540,17 +540,11 @@ function movePlayer(e){
 		const rowWidth = currentGameWorld[0].length - 1; // get the length of the first row
 		const columnHeight = currentGameWorld.length - 1; // get the number of rows in the array
 
-
-		console.log(`Row width: ${rowWidth}`);
-		console.log(`Column height: ${columnHeight}`);
-		console.log(`XY: ${nextX},${nextY}`);
-
 		if(nextY == 0) // Up
 		{
 			if(loader[0] != 0)
 			{
 				currentLevelNumber += loader[0];
-				console.log("Loading Level: " + currentLevelNumber);
 				nextLevel();
 			}
 		}
@@ -559,7 +553,6 @@ function movePlayer(e){
 			if(loader[1] != 0)
 			{
 				currentLevelNumber += loader[1];
-				console.log("Loading Level: " + currentLevelNumber);
 				nextLevel();
 			}
 		}
@@ -568,7 +561,6 @@ function movePlayer(e){
 			if(loader[2] != 0)
 			{
 				currentLevelNumber += loader[2];
-				console.log("Loading Level: " + currentLevelNumber);
 				nextLevel();
 			}
 		}
@@ -577,7 +569,6 @@ function movePlayer(e){
 			if(loader[3] != 0)
 			{
 				currentLevelNumber += loader[3];
-				console.log("Loading Level: " + currentLevelNumber);
 				nextLevel();
 			}
 		}
@@ -590,7 +581,6 @@ function movePlayer(e){
 
 		// Load Level
 		currentLevelNumber++;
-		console.log("Entering Dungeon");
 		nextLevel();
 		
 	}
@@ -603,7 +593,6 @@ function movePlayer(e){
 
 		// Load Level
 		currentLevelNumber--;
-		console.log("Exiting Dungeon");
 		nextLevel();
 	}
 }
@@ -618,7 +607,6 @@ function setupEvents(){
 	};
 	
 	window.onkeydown = (e)=>{
-		//console.log("keydown=" + e.keyCode);
 
 		// checking for other keys - ex. 'p' and 'P' for pausing
 		var char = String.fromCharCode(e.keyCode);
@@ -637,5 +625,4 @@ function gridClicked(e){
 	let columnWidth = cellWidth+cellSpacing;
 	let col = Math.floor(mouseX/columnWidth);
 	let row = Math.floor(mouseY/columnWidth);
-	console.log(`${col},${row}`);
 }

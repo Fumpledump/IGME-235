@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             selectedCell.classList.add(tile);
         }
-        console.log(levelData);
 
         // Store Data
         let tileData = -1
