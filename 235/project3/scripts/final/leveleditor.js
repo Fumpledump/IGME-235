@@ -297,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mouseIsDown = false;
     };
 
+
     document.querySelector('#tileChooser').onchange = (e)=> {
         tile = e.target.value;
     };

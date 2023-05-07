@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuDiv = document.getElementById('Menu');
 
     const leaveEditorButton = document.getElementById('leaveEditorButton');
+    const leaveExplorerButton = document.getElementById('leaveExplorerButton');
 
         // Add click event listeners to the buttons
     explorerButton.addEventListener('click', () => {
@@ -25,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     leaveEditorButton.addEventListener('click', () => {
+        levelEditorDiv.style.display = 'none';
+        mapExplorerDiv.style.display = 'none';
+        menuDiv.style.display = 'block';
+    });
+
+    leaveExplorerButton.addEventListener('click', () => {
         levelEditorDiv.style.display = 'none';
         mapExplorerDiv.style.display = 'none';
         menuDiv.style.display = 'block';

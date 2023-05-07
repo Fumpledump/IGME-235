@@ -21,7 +21,7 @@ body
 	margin-top: 0;
   }
   
-  #Menu button {
+  button {
 	background-color: #fff;
 	border: none;
 	border-radius: 4px;
@@ -32,8 +32,22 @@ body
 	padding: 10px 20px;
 	font-family: 'Press Start 2P', cursive;
   }
+
+  .button {
+	background-color: #fff;
+	border: none;
+	border-radius: 4px;
+	color: #333;
+	cursor: pointer;
+	font-size: 18px;
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-family: 'Press Start 2P', cursive;
+	text-decoration: none;
+
+  }
   
-  #Menu button:hover {
+  button:hover {
 	background-color: #ddd;
   }
 
@@ -52,17 +66,23 @@ body
 	margin-left: 15%;
 }
 
-#tileChooser{
+#tileChooser {
 	position: absolute;
 	top: 65px;
-	left:800px;
+	left: 800px;
 	margin-left: 15%;
-}
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 20px;
+  }
 
 #editorOutputButton
 {
 	position: absolute;
-	top: 90px;
+	top: 100px;
 	left:800px;
 	margin-left: 15%;
 }
@@ -70,7 +90,7 @@ body
 #leaveEditorButton
 {
 	position: absolute;
-	top: 120px;
+	top: 150px;
 	left:800px;
 	margin-left: 15%;
 }
@@ -78,7 +98,7 @@ body
 #outputtedLevelData
 {
 	position: absolute;
-	top: 140px;
+	top: 240px;
 	left:800px;
 	margin-left: 15%;
 	color: #ffffff;
@@ -142,6 +162,17 @@ body
 	color: #ffffff;
 }
 
+#Explorer h2{
+	font-family: 'Press Start 2P', cursive;
+	display: inline-block;
+	position:absolute;
+	font-size:1.1em;
+	top: 65px;
+	left:1000px;
+	line-height:1.5em;
+	color: #f2ff00;
+}
+
 #explorerGrid{
 	top:5px;
 	left:5px;
@@ -149,6 +180,14 @@ body
 	display:inline-block;
 	position:absolute;
 	z-index: 0; /* underneath everything */
+}
+
+#leaveExplorerButton
+{
+	position: absolute;
+	top: 110px;
+	left:710px;
+	margin-left: 15%;
 }
 
 
