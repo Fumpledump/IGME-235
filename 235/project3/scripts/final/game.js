@@ -10,10 +10,10 @@ let cells = []; // the HTML elements - our "view"
 const keyboard = Object.freeze({
 	SHIFT: 		16,
 	SPACE: 		32,
-	LEFT: 		37, 
-	UP: 		38, 
-	RIGHT: 		39, 
-	DOWN: 		40
+	LEFT: 		65, 
+	UP: 		87, 
+	RIGHT: 		68, 
+	DOWN: 		83
 });
 
 // this is an enumeration for gameworld levels
